@@ -8,7 +8,7 @@ Router.get('/getUserById/:id',fetchItemByIdUserController);
 
 Router.get('/getAllpost',fetchAllPostController);
 Router.post('/createpost',insertItemPostController)
-Router.get('/getpostById/:id',fetchItemByIdPostController);
+Router.get('/getpostById/:interestTag',fetchItemByIdPostController);
 
 export{Router as routes};
 

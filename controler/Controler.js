@@ -26,11 +26,11 @@ export async function fetchItemByIdUserController(req,res){
 export async function insertItemUserController(req,res){
     const data = req.body;
     try{
-        const detail2 = await insertUserDetails(data)
-        return res.status(200).json(detail2);
+        const detail = await insertUserDetails(data)
+        return res.status(200).json(detail);
     }
     catch (err){
-        return res.status(500).send("ID  getting error check once code");
+        return res.status(500).send("insert the details get error");
 
     }
 }
@@ -46,7 +46,7 @@ export async function fetchAllPostController(req,res){
     }
 }
 export async function fetchItemByIdPostController(req,res){
-    const id = req.params.id;
+    const id = req.params.interestTag;
     try{
         const detail = await  fetchPostDetailById(id);
         return res.status(200).json(detail);

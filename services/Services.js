@@ -3,7 +3,7 @@ import { item1} from '../models/Post.js';
 import mongoose from 'mongoose';
 
 export async function fetchAllUserDetails(){
-    const Items = await item.find({});
+    const Items = await item.find({ });
     return Items;
 }
 

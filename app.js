@@ -6,8 +6,8 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
-const databaseUrl = 'mongodb+srv://node:node123@cluster0.xl4ufri.mongodb.net/test'
+app.use(express.json());
+const databaseUrl = 'mongodb+srv://node:node123@cluster0.xl4ufri.mongodb.net/detail'
 mongoose.connect(databaseUrl);
 const database = mongoose.connection;
 
@@ -20,6 +20,7 @@ database.once('connected',()=>{
 })
 
 app.use(routes);
+
 app.get('/node',(req,res)=>{
     res.status(200).send("server is running is succefully");
 
