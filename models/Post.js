@@ -20,8 +20,11 @@ const detailpost = new mongoose.Schema({
         type:Number,
         default:0
 
+    },
+    interest:{
+        type:[String]
     }
-})
+},{timestamps:true})
 
 const item1 = mongoose.model('post',detailpost)
 export{item1};
